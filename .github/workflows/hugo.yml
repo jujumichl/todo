@@ -3,32 +3,30 @@ name: Build and Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main   # Branche principale où tu codes
+      - main  # branche principale de ton repo, change si besoin
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        submodules: true  # si tu utilises des submodules (ex: thème)
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # si tu as des submodules (comme hugo theme)
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3
-      with:
-        hugo-version: '0.121.0'  # adapte la version si besoin
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.111.3'  # adapte la version si besoin
 
-    - name: Build Hugo site
-      run: hugo --minify
+      - name: Build Hugo site
+        run: hugo --minify
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
-        # Ajoute ce fichier pour désactiver Jekyll
-        user_name: "github-actions[bot]"
-        user_email: "github-actions[bot]@users.noreply.github.com"
-        commit_message: "Automated site update via GitHub Actions"
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          # destination is root of gh-pages branch (default)
