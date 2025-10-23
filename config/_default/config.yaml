@@ -1,6 +1,6 @@
 baseURL: "http://localhost:1313/"
 title: "Suivi de projets"
-theme: ["hugo-blox"]
+theme: "hugo-blox"
 
 enableGitInfo: true
 defaultContentLanguage: fr
