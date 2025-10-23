@@ -1,5 +1,5 @@
-baseURL: "http://localhost:1313/"
-title: "Suivi de projets"
+baseURL: "https://jujumichl.github.io/todo/"
+title: "Todo list"
 theme: "hugo-blox"
 
 enableGitInfo: true

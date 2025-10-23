@@ -1,5 +1,5 @@
 ---
-title: "Suivi de projets informatiques"
+title: "Acceuil"
 date: 2025-10-23
 draft: false
 ---
