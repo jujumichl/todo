@@ -1,28 +1,8 @@
-<style>
-.code-box {
-  position: relative;
-  background: #2d2d2d;
-  color: #f8f8f2;
-  padding: 1em;
-  border-radius: 5px;
-  font-family: monospace;
-  margin: 1em 0;
-  overflow-x: auto;
-}
-
-.code-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #ffcc00;
-  color: #000;
-  font-size: 0.75em;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-bottom-right-radius: 5px;
-}
-</style>
-
+---
+title: "Suivi de projets informatiques"
+date: 2025-10-23
+draft: false
+---
 # SOMMAIRE
 * [Sur la borne interactive](#-sur-la-borne-interactive)
 * [Statistiques téléphonie](#-statistiques‑téléphonie)
