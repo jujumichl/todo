@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main  # branche principale de ton repo, change si besoin
-
+permissions:
+  contents: write
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
